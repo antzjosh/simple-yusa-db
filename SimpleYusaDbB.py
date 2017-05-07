@@ -14,15 +14,12 @@ def main():
     #Tuple containing the labels
     userLabels = ('First Name', 'Second Name', 'Email Address', 'Mobile #', 'Address')
     
-    #Get data from user
-    fname = input(userLabels[0] + ': ')
-    sname = input(userLabels[1] + ': ')
-    email = input(userLabels[2] + ': ')
-    mobile = input(userLabels[3] + ': ')
-    addr = input(userLabels[4] + ': ')
-    
-    #A list containing the input data
-    userData = [fname, sname, email, mobile, addr]
+    #Create List for holding actual data entered by user
+    userData = []
+
+    #Display user promts from userLabels Tuple and save user input into userData List
+    for label in userLabels:
+        userData.append(input(label + ': '))
     
     #Format output to be displayed
     displayUser = "Hi, my name is " + userData[0] + " " + userData[1]
