@@ -20,6 +20,9 @@ def displayOutput(uData):
     displayAddr = "\nI live at " + uData[4]
     displayContacts = ".\nMy contacts are:\n\t-Email: " + uData[2] + "\n\t-Mobile: " + uData[3]
     
+    #Display the output
+    print(displayUser + displayAddr + displayContacts)
+    
 def main():
     #Initialize labels 
     userLabels = initLabels()
@@ -33,7 +36,5 @@ def main():
     
     #Format output to be displayed
     displayOutput(userData)
-    #Display the output
-    print(displayUser + displayAddr + displayContacts)
 
 main()
