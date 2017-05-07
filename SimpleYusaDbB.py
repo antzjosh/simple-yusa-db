@@ -9,10 +9,20 @@
 #   Version: 1.0                                                                                           #
 #   Date: 07/05/17                                                                                         #
 ############################################################################################################
-
-def main():
+def initLabels():
     #Tuple containing the labels
-    userLabels = ('First Name', 'Second Name', 'Email Address', 'Mobile #', 'Address')
+    uLabels = ('First Name', 'Second Name', 'Email Address', 'Mobile #', 'Address')
+    return uLabels;
+    
+
+def displayOutput(uData):
+    displayUser = "Hi, my name is " + uData[0] + " " + uData[1]
+    displayAddr = "\nI live at " + uData[4]
+    displayContacts = ".\nMy contacts are:\n\t-Email: " + uData[2] + "\n\t-Mobile: " + uData[3]
+    
+def main():
+    #Initialize labels 
+    userLabels = initLabels()
     
     #Create List for holding actual data entered by user
     userData = []
@@ -22,10 +32,7 @@ def main():
         userData.append(input(label + ': '))
     
     #Format output to be displayed
-    displayUser = "Hi, my name is " + userData[0] + " " + userData[1]
-    displayAddr = "\nI live at " + userData[4]
-    displayContacts = ".\nMy contacts are:\n\t-Email: " + userData[2] + "\n\t-Mobile: " + userData[3]
-    
+    displayOutput(userData)
     #Display the output
     print(displayUser + displayAddr + displayContacts)
 
