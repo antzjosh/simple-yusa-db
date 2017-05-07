@@ -11,20 +11,25 @@
 ############################################################################################################
 
 def main():
+    #Tuple containing the labels
     userLabels = ('First Name', 'Second Name', 'Email Address', 'Mobile #', 'Address')
     
+    #Get data from user
     fname = input(userLabels[0] + ': ')
     sname = input(userLabels[1] + ': ')
     email = input(userLabels[2] + ': ')
     mobile = input(userLabels[3] + ': ')
     addr = input(userLabels[4] + ': ')
     
+    #A list containing the input data
     userData = [fname, sname, email, mobile, addr]
     
+    #Format output to be displayed
     displayUser = "Hi, my name is " + userData[0] + " " + userData[1]
     displayAddr = "\nI live at " + userData[4]
     displayContacts = ".\nMy contacts are:\n\t-Email: " + userData[2] + "\n\t-Mobile: " + userData[3]
     
+    #Display the output
     print(displayUser + displayAddr + displayContacts)
 
 main()
